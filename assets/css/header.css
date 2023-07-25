@@ -1,0 +1,20 @@
+/* Reset default margins and paddings for the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+  background-color: #87CEFA; /* Light blue color */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the heading horizontally */
+}
+
+/* Style the heading in the navigation bar */
+.navbar .heading {
+  color: white;
+  font-size: 24px;
+  padding: 14px 16px;
+}

@@ -1,0 +1,28 @@
+<h1>
+    <%= title %>
+    <div id="create-project">
+        <h1><u>CREATE PROJECT</u></h1>
+        <form action="/create" method="POST">
+             <input type="text" name="name" placeholder="enter project name">
+             <input type="text" name="description" placeholder="description">
+             <input type="text" name="author" placeholder="enter author name" >
+
+             <button type="submit">ADD PROJECT</button>
+        </form>
+
+        <h1><u>PROJECTS LIST</u></h1>
+        <div>
+           <ul>
+              <% for(let i of project_list){ %>
+                  <li><a href=""><%= i.name %></a></li>
+              <%}%>
+
+
+           </ul>
+            
+                
+        </div>
+
+    </div>
+</h1>
+    
