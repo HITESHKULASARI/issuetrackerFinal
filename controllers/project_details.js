@@ -1,3 +1,6 @@
 module.exports.details = function(req,res){
-    return res.render('project_details.ejs')
+    console.log("here i am");
+    console.log(req.query);
+    console.log(req.query.idx);
+    return res.render('project_details.ejs');
 }

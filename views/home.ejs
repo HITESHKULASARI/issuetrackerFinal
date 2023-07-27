@@ -13,8 +13,10 @@
         <h1><u>PROJECTS LIST</u></h1>
         <div>
            <ul>
+              <%var index = 0;%>
               <% for(let i of project_list){ %>
-                  <li><a href=""><%= i.name %></a></li>
+                  <li><a href="/details/?idx=<%= index %>"><%= i.name %></a></li>
+                  <%index++%>
               <%}%>
 
 

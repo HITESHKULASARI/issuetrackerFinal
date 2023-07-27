@@ -1,4 +1,48 @@
 <link rel="stylesheet" href="/css/project_details.css">
 <h1>
-    Codeial/details Page
+    <u>PROJECT DETAILS PAGE</u>  
 </h1>
+<div>
+    <div id="details-project">
+       <div id="general-formating">
+         <b>name</b>  : <%= name%>
+       </div>
+       <div id="general-formating">
+        <b>description</b>: <%= description%>
+       </div>
+       <div id="general-formating">
+        <b>author</b> : <%= author%>
+       </div>    
+        
+    </div>
+
+    <h1><u>CREATE ERRORS AND BUGS </u></h1>
+     
+    <form action="/createErr/?idx=<%=index%>" method="POST">
+        <input type="text" name="title" placeholder="enter project name">
+        <input type="text" name="description" placeholder="description">
+        <input type="text" name="author" placeholder="enter author name" >
+
+        <button type="submit">ADD ERROR</button>
+
+    </form>
+       
+    <h1><u> ERRORS AND BUGS IN PROJECT </u></h1>
+    <div id="fetch-info">
+      <%console.log("errorList")%>
+      <%console.log(errorList)%>
+      <%if(errorList){%>
+        <% for(let i of errorList ){ %>
+
+            <li>
+                <div>TITLE:<%= i.Title%></div>
+                <div>DESCRIPTION:<%= i.description%></div>
+                <div>AUTHOR:<%= i.author%></div>    
+            </li>
+            
+        <%}%>
+      <%}%>
+    </div>
+    </div>
+
+</div>
